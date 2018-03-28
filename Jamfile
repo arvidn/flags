@@ -1,0 +1,17 @@
+import testing ;
+
+alias type-safe-flags
+	: # sources
+	: # requirements
+	: # default build
+	: <include>include
+	;
+
+explicit test ;
+
+project : requirements
+	<library>type-safe-flags
+	;
+
+test-suite test : [ run test_flags.cpp ] ;
+
